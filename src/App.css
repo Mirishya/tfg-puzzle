@@ -28,6 +28,83 @@
   color: #61dafb;
 }
 
+
+#filas {
+  color: rgb(8, 8, 169);
+
+}
+
+#columnas { 
+  color: rgb(8, 8, 169);
+}
+#parar {
+  color: white;
+  background-color: red;
+  
+}
+#comenzar {
+  color: white;
+  background-color: green;
+  
+}
+#reset {
+  color: white;
+  background-color: rgb(203, 203, 122);
+  
+}
+#musica{
+  color: white;
+  background-color:indigo;
+  
+
+}
+
+.Puzzle{
+  background-image:linear-gradient(to bottom right,
+  #22aded 0%,
+  gold 20%,
+  #a1d1e8 40%,
+  rgb(158, 77, 215) 60%,
+  pink 80%
+  
+  ); 
+  background-size: 2000px 2000px;
+ 
+  animation: moveBackground 8s linear infinite alternate;
+  
+}
+
+.crono{
+  size: 20;
+  color:black;
+  width: 150px;
+  height: 150px;
+}
+
+.star{
+
+  size: 40;
+  color:gold;
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#scroll{
+  color:indigo;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +113,24 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{ 
+    transform: rotate(0.5deg);
+  }
+  
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -600px -600px;
+  }
+}
+
+
+  

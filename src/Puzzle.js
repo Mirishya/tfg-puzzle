@@ -1,8 +1,7 @@
 import React from "react";
-/*
 import "./App.css";
 import "./puzzle.css";
-import "./Formulario.php"
+//import "./Formulario.php"
 //import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import { Cronometer } from "./Botton.js"
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
@@ -10,13 +9,10 @@ import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import { useSpring, animated } from 'react-spring';
 import Card from "./Card.jsx";
 import mar2 from "./mar2.jpg";
-*/
-import Tabs from "./Tabs.js";
-//import { BrowserRouter, Navigate, Link,Route } from 'react-router-dom';
-
 
 function App() {
-/*
+
+    /*
 	const springProps = useSpring({
 		opacity: 1,
 		from: { opacity: 0 },
@@ -24,9 +20,7 @@ function App() {
 	});
 */
 	return (
-		
-		/*	<animated.div style={springProps}>
-				<Tabs></Tabs>
+        <div>
 				<Card
 					image={mar2}
 					title="Puzzle React"
@@ -37,13 +31,8 @@ function App() {
 				
 				<Cronometer />
 				
-			</ animated.div>
-	);
-	*/
-	<div>
-		<h1>Mi Aplicación con Pestañas</h1>
-  <Tabs />
-	</div>
+			</div>
+		
 	);
 }
 
