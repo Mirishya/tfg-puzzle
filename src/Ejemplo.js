@@ -4,7 +4,7 @@ const Ejemplo = () => {
  // return <PuzzleBoard imageSrc={imageSrc} />;
  return(
   <div>
-  <h1>Ejemplo de página</h1>
+  <h1></h1>
   
 </div>
  );

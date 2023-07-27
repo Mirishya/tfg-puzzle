@@ -3,8 +3,6 @@ import "./App.css";
 import "./puzzle.css";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import { Audio } from "./Audio.js";
-//import paper from "paper";
-import { BezierCurve } from './Bezier.js';
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import mar from "./mar.jpg";
 
@@ -219,7 +217,6 @@ function Cronometer() {
 				{star1} {star2} {star3}
 			</div>
 			
-		<BezierCurve></BezierCurve>
    
 			<JigsawPuzzle
 				imageSrc={mar}

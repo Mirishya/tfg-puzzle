@@ -1,20 +1,55 @@
 .tabs {
     display: flex;
+   
+  }
+
+  .tabmain{
+    position: relative;
+  background-color: rgb(187, 238, 247);
   }
   
   .tabs button {
-    padding: 10px 20px;
+    padding: 100px 200px;
+    flex:1;
     cursor: pointer;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
+    background-color: #48ccf8;
+    border: 1px solid #18257b;
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 87% 25%, 87% 75%, 50% 100%, 13% 75%, 13% 25%);
   }
+ 
   
   .tabs button.active {
-    background-color: #ccc;
+    background-color: #07a2d6;
   }
+ 
   
-  .tab-content {
-    padding: 20px;
-    border: 1px solid #ccc;
+  .Puzzle{
+    background-image:linear-gradient(to bottom right,
+    #22aded 0%,
+    gold 20%,
+    #757adb 40%,
+    rgb(124, 229, 236)60%,
+     rgb(36, 14, 183) 80%
+    
+    ); 
+    background-size: 2000px 2000px;
+   
+    animation: moveBackground 8s linear infinite alternate;
+    
+  }
+  .Planetario{
+    background-image:linear-gradient(to bottom right,
+    #22aded 0%,
+    gold 20%,
+    #757adb 40%,
+    rgb(124, 229, 236)60%,
+     rgb(36, 14, 183) 80%
+    
+    ); 
+    background-size: 2000px 2000px;
+   
+    animation: moveBackground 8s linear infinite alternate;
+    
   }
   

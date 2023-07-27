@@ -1,8 +1,9 @@
 import React from "react";
+import "./App.css";
 /*
 import "./App.css";
 import "./puzzle.css";
-import "./Formulario.php"
+//import "./Formulario.php"
 //import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import { Cronometer } from "./Botton.js"
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
@@ -40,8 +41,8 @@ function App() {
 			</ animated.div>
 	);
 	*/
-	<div>
-		<h1>Mi Aplicación con Pestañas</h1>
+	<div className="Bottom">
+		<h1>Mi Portfolio </h1>
   <Tabs />
 	</div>
 	);
