@@ -81,21 +81,6 @@
   color:indigo;
 }
 
-.Planetario{
-  background-image:linear-gradient(to bottom right,
-  #22aded 0%,
-  gold 20%,
-  #757adb 40%,
-  rgb(124, 229, 236)60%,
-   rgb(36, 14, 183) 80%
-  
-  ); 
-  background-size: 2000px 2000px;
- 
-  animation: moveBackground 8s linear infinite alternate;
-  
-}
-
 
 @keyframes fadeIn {
   from {

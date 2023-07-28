@@ -1,4 +1,4 @@
-/* for the heading */
+
 .tag {
 	text-align: center;
 	color: rgb(8, 8, 196);
@@ -6,7 +6,6 @@
 	
 }
 
-/* for the jigsaw puzzle container */
 .jigsaw-puzzle {
 	width: 35%;
 	height: 35%;
@@ -16,7 +15,4 @@
 	position: relative;
     top: -150px;
     left: 415px;
-
-	
-
 }

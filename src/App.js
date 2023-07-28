@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { useSpring, animated } from 'react-spring';
 /*
 import "./App.css";
 import "./puzzle.css";
@@ -17,13 +18,13 @@ import Tabs from "./Tabs.js";
 
 
 function App() {
-/*
+
 	const springProps = useSpring({
 		opacity: 1,
 		from: { opacity: 0 },
-		config: { duration: 4000 },
+		config: { duration: 3000 },
 	});
-*/
+
 	return (
 		
 		/*	<animated.div style={springProps}>
@@ -41,10 +42,12 @@ function App() {
 			</ animated.div>
 	);
 	*/
+	<animated.div style={springProps}>
 	<div className="Bottom">
-		<h1>Mi Portfolio </h1>
+		<h1> </h1>
   <Tabs />
 	</div>
+	</animated.div>
 	);
 }
 

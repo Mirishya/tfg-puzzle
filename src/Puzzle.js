@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import "./puzzle.css";
+import "./Puzzle.css";
 //import "./Formulario.php"
 //import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import { Cronometer } from "./Botton.js"

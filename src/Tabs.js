@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Tabs.css';
 import "./App.css";
-import "./Ejemplo.js";
-import Ejemplo from './Ejemplo.js';
+
+import Laberinto from './Laberinto.js';
 import PlanetarioP5 from "./PlanetarioP5.js";
 import Puzzle from "./Puzzle.js";
 
@@ -30,7 +30,7 @@ const Tabs = () => {
           className={activeTab === 1 ? 'active' : ''}
           onClick={() => handleTabClick(1)}
         >
-          Inicio
+          <b>Inicio</b>
           
         </button>
         
@@ -38,43 +38,63 @@ const Tabs = () => {
           className={activeTab === 2 ? 'active' : ''}
           onClick={() => handleTabClick(2)}
         >
-          Planetario
+         <b>Planetario</b> 
         </button>
         <button id="tab-hexagon"
           className={activeTab === 3 ? 'active' : ''}
           onClick={() => handleTabClick(3)}
         >
-          Puzzle
+          <b>Puzzle</b>
         </button>
+
+
+
+        </div>
+
+      <div className="tabs">
+
         <button id="tab-hexagon"
           className={activeTab === 4 ? 'active' : ''}
           onClick={() => handleTabClick(4)}
         >
-          Proyecto 4
+          <b>Laberinto</b>
         </button>
         <button id="tab-hexagon"
           className={activeTab === 5 ? 'active' : ''}
           onClick={() => handleTabClick(5)}
         >
-          Proyecto 5
+          <b>Proyecto 4</b>
         </button>
         <button id="tab-hexagon"
           className={activeTab === 6 ? 'active' : ''}
           onClick={() => handleTabClick(6)}
         >
-          Proyecto 6
+          <b>Proyecto 5 </b>
         </button>
+
+
+
+    </div >
+
+    <div className="tabs">
+        
         <button id="tab-hexagon"
           className={activeTab === 7 ? 'active' : ''}
           onClick={() => handleTabClick(7)}
         >
-          Proyecto 7
+          <b>Proyecto 6 </b>
         </button>
         <button id="tab-hexagon"
           className={activeTab === 8 ? 'active' : ''}
           onClick={() => handleTabClick(8)}
         >
-          Proyecto 8
+         <b>Proyecto 7</b> 
+        </button>
+        <button id="tab-hexagon"
+          className={activeTab === 9 ? 'active' : ''}
+          onClick={() => handleTabClick(8)}
+        >
+          <b>Proyecto 8</b>
         </button>
         
       </div>
@@ -88,8 +108,7 @@ const Tabs = () => {
         {activeTab === 2 && p5ContainerMounted &&
          <div>
             <h2>Planetario interactivo</h2>
-            <h3>Haz click en el planeta que desees conocer sus características </h3>
-            <p>Puedes añadir más elementos y clases aquí según tus necesidades.</p>
+            <h3>Haz click en el Sol o en aquellos planetas que desees conocer sus características </h3>
            
             <PlanetarioP5></PlanetarioP5> 
                 
@@ -97,11 +116,15 @@ const Tabs = () => {
 }
         {activeTab === 3 && 
         <div>
+          
             <Puzzle></Puzzle>
                 </div>}
                 {activeTab === 4 && (
           <div>
-          
+            <h2>Laberinto</h2>
+          <h3>Desplázate con los cursores del teclado y haz uso del ratón.</h3>
+            <Laberinto></Laberinto>
+            
           </div>
         )}
 
@@ -122,6 +145,11 @@ const Tabs = () => {
           </div>
         )}
            {activeTab === 8 && (
+          <div>
+          
+          </div>
+        )}
+        {activeTab === 9 && (
           <div>
           
           </div>

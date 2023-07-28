@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "./App.css";
-import "./puzzle.css";
+import "./Puzzle.css";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import { Audio } from "./Audio.js";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
