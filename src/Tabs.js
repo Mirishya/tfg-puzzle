@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Tabs.css';
-import "./App.css";
+import './App.css';
 
-import Laberinto from './Laberinto.js';
-import PlanetarioP5 from "./PlanetarioP5.js";
-import Puzzle from "./Puzzle.js";
+import Laberinto from './LaberintoP5.js';
+import Planetario from './PlanetarioP5.js';
+import Puzzle from './Puzzle.js';
+import Draw from './DrawP5.js';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -63,7 +64,7 @@ const Tabs = () => {
           className={activeTab === 5 ? 'active' : ''}
           onClick={() => handleTabClick(5)}
         >
-          <b>Proyecto 4</b>
+          <b>Dibuja</b>
         </button>
         <button id="tab-hexagon"
           className={activeTab === 6 ? 'active' : ''}
@@ -110,7 +111,7 @@ const Tabs = () => {
             <h2>Planetario interactivo</h2>
             <h3>Haz click en el Sol o en aquellos planetas que desees conocer sus características </h3>
            
-            <PlanetarioP5></PlanetarioP5> 
+            <Planetario></Planetario> 
                 
               </div>
 }
@@ -122,7 +123,7 @@ const Tabs = () => {
                 {activeTab === 4 && (
           <div>
             <h2>Laberinto</h2>
-          <h3>Desplázate con los cursores del teclado y haz uso del ratón.</h3>
+          <h3>Desplázate desde la casilla azul con los cursores del teclado para llegar a la meta.</h3>
             <Laberinto></Laberinto>
             
           </div>
@@ -130,7 +131,9 @@ const Tabs = () => {
 
 {activeTab === 5 && (
           <div>
-          
+          <h2>Dibujar</h2>
+          <h3>Dibuja lo que quieras con cada una de las herramientas y diviértete</h3>
+          <Draw></Draw>
           </div>
         )}
            {activeTab === 6 && (

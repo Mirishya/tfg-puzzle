@@ -1,0 +1,16 @@
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        color: rgb(100, 104, 173); 
+      }
+      50% {
+        opacity: 0;
+        color: blue; 
+      }
+  }
+  
+  .maze-completed {
+    animation: blink 0.5s infinite;
+
+  }
+  

@@ -222,7 +222,7 @@ NeptuneAngle += 0.0005;
           }
         }
       }
-const P5Sketch = () => {
+const Planetario = () => {
   
   let InfoText;
   let timer=null;
@@ -583,4 +583,4 @@ Neptuno tiene 14 lunas conocidas, las más grandes son Tritón, Nereida, Náyade
 );
 };
 
-export default P5Sketch;
+export default Planetario;

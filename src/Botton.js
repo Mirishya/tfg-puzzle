@@ -37,18 +37,6 @@ function Cronometer() {
 			setStar2(star2 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar3(star3 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 
-			/* Medallas
-			setStar1(star1 === '\uD83E\uDD47' ? '\u2606' : '\uD83E\uDD47');
-			setStar2(star2 === '\uD83E\uDD47' ? '\u2606' : '\uD83E\uDD47');
-			setStar3(star3 === '\uD83E\uDD47' ? '\u2606' : '\uD83E\uDD47');
-			/*
-	
-			Con estrellas
-			setStar1(star1 === '\u2605' ? '\u2606' : '\u2605');
-			setStar2(star2 === '\u2605' ? '\u2606' : '\u2605');
-			setStar3(star3 === '\u2605' ? '\u2606' : '\u2605');
-			*/
-
 		}
 		else if (seconds >= 10 && seconds <= 14) {
 
@@ -114,18 +102,6 @@ function Cronometer() {
 			setStar1(star1 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar2(star2 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar3(star3 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
-
-			/* Medallas
-			setStar1(star1 === '\uD83E\uDD47' ? '\u2606' : '\uD83E\uDD47');
-			setStar2(star2 === '\uD83E\uDD47' ? '\u2606' : '\uD83E\uDD47');
-			setStar3(star3 === '\uD83E\uDD47' ? '\u2606' : '\uD83E\uDD47');
-			/*
-	
-			Con estrellas
-			setStar1(star1 === '\u2605' ? '\u2606' : '\u2605');
-			setStar2(star2 === '\u2605' ? '\u2606' : '\u2605');
-			setStar3(star3 === '\u2605' ? '\u2606' : '\u2605');
-			*/
 
 		}
 		else if (seconds >= 10 && seconds <= 14) {
@@ -225,10 +201,7 @@ function Cronometer() {
 				onSolved={set}
 				className="jigsaw-puzzle"
 
-			
 			/>
-
-
 		</div>
 	);
 }
