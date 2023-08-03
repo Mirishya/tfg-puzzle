@@ -23,9 +23,9 @@ function ScrollAnimation() {
 
   return (
     <div id= "scroll">
-    <animated.div style={props} ref={ref}>
-      <h2>Continúa para comenzar el puzzle</h2>
-    </animated.div>
+      <animated.div style={props} ref={ref}>
+        <h2>Continúa para comenzar el puzzle</h2>
+      </animated.div>
     </div>
   );
 }

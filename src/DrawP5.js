@@ -24,6 +24,7 @@ const Draw = () => {
     p.fill(bgcolor);
     p.noStroke();
     p.rect(0, 100, p.width, p.height - 100);
+
   };
 
   function drawMenu(p){
@@ -49,7 +50,9 @@ const Draw = () => {
         p.stroke(colorPicker.color());
         p.strokeWeight(slider.value());
         p.line(p.pmouseX, p.pmouseY, p.mouseX, p.mouseY);
-      } else if (sel.value() === "Dispersión de puntos") {
+      } 
+      else if (sel.value() === "Dispersión de puntos") {
+
         for (let i = 0; i < p.random(1, 10); i++) {
           p.noStroke();
           p.fill(colorPicker.color());
@@ -60,14 +63,20 @@ const Draw = () => {
             slider.value()
           );
         }
-      } else if (sel.value() === "Borrador") {
+      } 
+      else if (sel.value() === "Borrador") {
+
         p.stroke(bgcolor);
         p.strokeWeight(slider.value());
         p.line(p.pmouseX, p.pmouseY, p.mouseX, p.mouseY);
-      } else if (sel.value() === "Dibuja rectángulos") {
+      }
+       else if (sel.value() === "Dibuja rectángulos") {
+
         p.fill(colorPicker.color());
         p.rect(p.mouseX, p.mouseY, slider.value(), slider.value());
-      } else if (sel.value() === "Dibuja triángulos") {
+      } 
+      else if (sel.value() === "Dibuja triángulos") {
+        
         p.fill(colorPicker.color());
         p.triangle(
           p.mouseX,
@@ -104,10 +113,10 @@ const Draw = () => {
         p.noStroke();
 
         colorPicker = p.createColorPicker('#000000');
-        colorPicker.position(50, 750);
+        colorPicker.position(50, 770);
 
         sel = p.createSelect();
-        sel.position(260, 750);
+        sel.position(260, 780);
         sel.option("Trazo libre");
         sel.option("Dispersión de puntos");
         sel.option("Borrador");
@@ -115,15 +124,15 @@ const Draw = () => {
         sel.option("Dibuja triángulos");
 
         slider = p.createSlider(1, 100, 20, 1);
-        slider.position(550, 750);
+        slider.position(550, 780);
         slider.style('width', '180px');
 
         p.createButton("Borrar todo")
-          .position(900, 700)
+          .position(900, 720)
           .mousePressed(() => clearBG(p));
         
         p.createButton("Guardar la imagen   ")
-          .position(900, 750)
+          .position(900, 780)
           .mousePressed(saveCanvas);
 
       };

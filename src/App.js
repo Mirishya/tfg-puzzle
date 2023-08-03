@@ -14,17 +14,13 @@ function App() {
 	});
 
 	return (
-	<animated.div style={springProps}>
+		<animated.div style={springProps}>
 	<div>
 	
-  <Tabs />
+ 			 <Tabs />
 	</div>
-	</animated.div>
+		</animated.div>
 	);
 }
 
 export default App;
-
-
-
-

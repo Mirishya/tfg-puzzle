@@ -17,34 +17,34 @@ let metaY;
 let laberinto;
 
 function drawMaze(p){
-p.background(220);
+  p.background(220);
 
-// Dibuja el laberinto
-for (let x = 0; x < numceldas; x += 1) {
-  for (let y = 0; y < numceldas; y += 1) {
-    if (laberinto[x][y] === 0) {
-      p.fill(0);
-    } else if (laberinto[x][y] === 1) {
-      p.fill(255);
-    } else if (laberinto[x][y] === 2) {
-      p.fill(255); // Color blanco para el camino
+  // Dibuja el laberinto
+  for (let x = 0; x < numceldas; x += 1) {
+    for (let y = 0; y < numceldas; y += 1) {
+      if (laberinto[x][y] === 0) {
+        p.fill(0);
+      } else if (laberinto[x][y] === 1) {
+        p.fill(255);
+      } else if (laberinto[x][y] === 2) {
+        p.fill(255); // Color blanco para el camino
+      }
+      p.rect(x * t, y * t, t, t);
     }
-    p.rect(x * t, y * t, t, t);
   }
-}
 }
 
 function drawGoal(p){
-p.fill(255, 0, 0);
-p.rect(metaX * t, metaY * t, t, t);
+  p.fill(255, 0, 0);
+  p.rect(metaX * t, metaY * t, t, t);
 }
 
 function drawPlayer(p){
-p.fill(0, 0, 255);
-p.rect(posX * t, posY * t, t, t);
+  p.fill(0, 0, 255);
+  p.rect(posX * t, posY * t, t, t);
 }
 
-const MazeSketch = () => {
+const Maze = () => {
   const canvasRef = useRef();
   const [completed, setCompleted] = useState(false); // State to track if the maze is completed
   const [playerCanMove, setPlayerCanMove] = useState(true);
@@ -124,6 +124,7 @@ const MazeSketch = () => {
 
         const direcciones = p.shuffle([
           { dx: 2, dy: 0 }, { dx: -2, dy: 0 }, { dx: 0, dy: 2 }, { dx: 0, dy: -2 }
+          
         ]);
 
         for (const dir of direcciones) {
@@ -189,4 +190,4 @@ const MazeSketch = () => {
   );
 };
 
-export default MazeSketch;
+export default Maze;

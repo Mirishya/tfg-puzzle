@@ -7,12 +7,12 @@ function Card(props) {
     <div className="card">
         
       <img src={props.image} alt={props.title} />
-      <div className="card-content">
-        <h2>{props.title}</h2>
-        <h2>Prueba</h2>
-        <p>{props.description}</p>
-        <Scroll> </Scroll>
-      </div>
+        <div className="card-content">
+          <h2>{props.title}</h2>
+          <h2>Prueba</h2>
+            <p>{props.description}</p>
+              <Scroll> </Scroll>
+        </div>
     </div>
   );
 }

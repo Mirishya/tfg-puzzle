@@ -10,9 +10,8 @@ import { useSpring,animated} from 'react-spring';
 import Card from "./Card.jsx";
 import mar2 from "./mar2.jpg";
 
-function App() {
+function Puzzle() {
 
-    
 	const springProps = useSpring({
 		opacity: 1,
 		from: { opacity: 0 },
@@ -21,12 +20,12 @@ function App() {
 
 	return (
 		<animated.div style={springProps}>
-        <div  className="Puzzle">
+        	<div  className="Puzzle">
 				<Card
 					image={mar2}
 					title="Puzzle React"
 					description="REGLAS: Determina número de filas y columnas, cuando estés listo pulsa Start. 
-		En cuanto finalices el puzzle podrás ver tu Puntuación. Si quieres relajarte pulsa en Reproduce música."
+					En cuanto finalices el puzzle podrás ver tu Puntuación. Si quieres relajarte pulsa en Reproduce música."
 
 				/>
 				<Cronometer />
@@ -35,8 +34,4 @@ function App() {
 	);
 }
 
-export default App;
-
-
-
-
+export default Puzzle;
