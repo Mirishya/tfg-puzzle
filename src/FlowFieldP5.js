@@ -3,7 +3,6 @@ import p5 from 'p5';
 
 const FlowField = () => {
   let lineShape = 'ellipse'; // Estado para almacenar la forma de fondo elegida
-
   let points = [];
   let mult;
   let r1, r2, g1, g2, b1, b2;
@@ -18,13 +17,6 @@ const FlowField = () => {
       to_save.save("image.png");
     }
   }  
-    /*
-  function menuSaveCanvas(p){
-    p.createButton("Guardar imagen")
-    .position(700, 665)
-    .mousePressed(saveCanvas);
-  }
-  */
 
   const handleLineShape = (event) => {
     lineShape = event.target.value;
@@ -36,7 +28,7 @@ const FlowField = () => {
     drawLines(p); // Reinicializa el flow field
   }
 
-  function menuLines(p){
+  function menuFlowField(p){
     const shapeRadio = p.createRadio();
     shapeRadio.style('background-color', '#d3d3d3');
     shapeRadio.style('width', '1280px');
@@ -169,15 +161,13 @@ const FlowField = () => {
       };
 
       //Muestra el menú de opciones de líneas
-      menuLines(p);
+      menuFlowField(p);
 
       p.draw = () => {
       
       //Dibuja todo el Flow Field
       drawFlowField(p); 
       };
-      //Botón de guardar la imagen actual
-     // menuSaveCanvas(p);
     };
 
     const p5Canvas = new p5(sketch);
