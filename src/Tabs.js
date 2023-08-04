@@ -7,6 +7,7 @@ import Planetario from './PlanetarioP5.js';
 import Puzzle from './Puzzle.js';
 import Draw from './DrawP5.js';
 import Particulas from './ParticulasP5.js';
+import FlowField from './FlowFieldP5.js';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -83,7 +84,7 @@ const Tabs = () => {
         <button id="tab-hexagon"
           className={activeTab === 7 ? 'active' : ''}
           onClick={() => handleTabClick(7)}>
-          <b>Proyecto 6 </b>
+          <b>Campo de flujo</b>
 
         </button>
 
@@ -154,7 +155,9 @@ const Tabs = () => {
 
         {activeTab === 7 && (
           <div>
-          
+            <h2>Campos de flujo</h2>
+            
+              <FlowField></FlowField>
           </div>
         )}
 
