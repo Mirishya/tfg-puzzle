@@ -8,6 +8,7 @@ import Puzzle from './Puzzle.js';
 import Draw from './DrawP5.js';
 import Particulas from './ParticulasP5.js';
 import FlowField from './FlowFieldP5.js';
+import PerlinNoise from './PerlinNoiseP5.js';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -91,7 +92,7 @@ const Tabs = () => {
         <button id="tab-hexagon"
           className={activeTab === 8 ? 'active' : ''}
           onClick={() => handleTabClick(8)}>
-         <b>Proyecto 7</b> 
+         <b>Perlin Noise</b> 
 
         </button>
 
@@ -163,6 +164,9 @@ const Tabs = () => {
 
         {activeTab === 8 && (
           <div>
+            <h2>Perlin Noise</h2>
+            
+              <PerlinNoise></PerlinNoise>
           
           </div>
         )}
