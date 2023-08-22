@@ -128,7 +128,7 @@ const Draw = () => {
         slider.style('width', '180px');
 
         p.createButton("Borrar todo")
-          .position(900, 720)
+          .position(900, 740)
           .mousePressed(() => clearBG(p));
         
         p.createButton("Guardar la imagen   ")

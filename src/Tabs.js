@@ -175,6 +175,7 @@ const Tabs = () => {
         {activeTab === 9 && (
           <div>
             <h2>Visualizador</h2>
+            <h3>En el botón de Browse, elige la canción desde tu ordenador. Luego dale a Start para comenzar y si lo deseas lo puedes parar.</h3>
           
               <Visualizer></Visualizer>
 
