@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "./App.css";
 import "./Puzzle.css";
+import "./Cronometer.css";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import { Audio } from "./Audio.js";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import mar from "./mar.jpg";
+import little from "./littlemar.jpg";
 
 function Cronometer() {
 	const [seconds, setSeconds] = useState(0);
@@ -20,6 +22,20 @@ function Cronometer() {
 
 	const [filas, searchfilas] = useState('');
 	const [columnas, searchcolumnas] = useState('');
+	const [showPista, setShowPista] = useState(false);
+
+	const handleFilasChange = (event) => {
+		searchfilas(event.target.value);
+	};
+	
+	const handleColumnasChange = (event) => {
+		searchcolumnas(event.target.value);
+	};
+
+	const handleTogglePista = () => {
+		setShowPista(!showPista);
+	  };
+
 	const [text, setText] = useState("Comienza el puzzle");
 
 	const set = () => {
@@ -32,7 +48,6 @@ function Cronometer() {
 
 		if (seconds >= 5 && seconds <= 9) {
 			setReward('PUNTUACIÓN: ');
-
 			setStar1(star1 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar2(star2 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar3(star3 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
@@ -41,7 +56,6 @@ function Cronometer() {
 		else if (seconds >= 10 && seconds <= 14) {
 
 			setReward('PUNTUACIÓN: ');
-
 			setStar1(star1 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar2(star2 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar3('');
@@ -49,14 +63,12 @@ function Cronometer() {
 		else if (seconds >= 15 && seconds <= 20) {
 
 			setReward('PUNTUACIÓN: ');
-
 			setStar1(star1 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar2('');
 			setStar3('');
 		}
 		else if (seconds > 20) {
 			setReward('PUNTUACIÓN: Debes mejorar ');
-
 			setStar1('');
 			setStar2('');
 			setStar3('');
@@ -98,7 +110,6 @@ function Cronometer() {
 		setIsActive(false);
 		if (seconds >= 5 && seconds <= 9) {
 			setReward('PUNTUACIÓN: ');
-
 			setStar1(star1 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar2(star2 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar3(star3 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
@@ -107,7 +118,6 @@ function Cronometer() {
 		else if (seconds >= 10 && seconds <= 14) {
 
 			setReward('PUNTUACIÓN: ');
-
 			setStar1(star1 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar2(star2 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar3('');
@@ -115,14 +125,12 @@ function Cronometer() {
 		else if (seconds >= 15 && seconds <= 20) {
 
 			setReward('PUNTUACIÓN: ');
-
 			setStar1(star1 === '\uD83C\uDFC6' ? '\u2606' : '\uD83C\uDFC6');
 			setStar2('');
 			setStar3('');
 		}
 		else if (seconds > 20) {
 			setReward('PUNTUACIÓN: Debes mejorar ');
-
 			setStar1('');
 			setStar2('');
 			setStar3('');
@@ -146,8 +154,6 @@ function Cronometer() {
 		const seconds = Math.floor((time - minutes * 60000) / 1000);
 		const milliseconds = Math.floor((time - minutes * 60000 - seconds * 1000) / 10);
 
-
-
 		return `${padZero(minutes)}:${padZero(seconds)}.${padZero(milliseconds)}`;
 
 	}
@@ -156,53 +162,69 @@ function Cronometer() {
 		return num.toString().padStart(2, "0");
 	}
 	
-
 	return (
 		<div >
-
 			<form>
-
-				<p id="filas"><label>Ingresa número de filas: </label>
-					<input type="text" name="filas" size="4" onChange={ev => searchfilas(ev.target.value)
-					} /> </p>
-
-				<p id="columnas"><label> Ingresa número de columnas: </label>
-					<input type="text" name="columnas=" size="4" onChange={ev => searchcolumnas(ev.target.value)
-					} /> </p>
-
-				<p>Filas: {filas}</p>
-				<p>Columnas: {columnas}</p>
-			</form>
-
-			<h2 className="tag">{text}</h2>
-			<div className="crono">
-				<div> <b>{formatTime(elapsedTime)} </b></div>
-				<button id="comenzar" onClick={handleStart}>Start</button>
-				<button id="parar" onClick={handlePause}>Stop</button>
-				<button id="reset" onClick={handleReset}>Reset</button>
-				<Audio></Audio>
-				<p>
-					<b>
-
-						{reward}
-					</b>
+        		<p id="filas">
+					<div className="menufilas">
+          				<label>Selecciona número de filas: </label>
+						<select value={filas} onChange={handleFilasChange}>
+							<option value="">Elige</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+       			</p>
+        
+        		<p id="columnas">
+					<div className="menuColumnas">
+						<label>Selecciona número de columnas: </label>
+						<select value={columnas} onChange={handleColumnasChange}>
+							<option value="">Elige</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
 				</p>
-			</div>
 
-			<div className="star">
-				{star1} {star2} {star3}
-			</div>
+        		<p>Filas: {filas}</p>
+        		<p>Columnas: {columnas}</p>
+      		</form>
+
+				<h2 className="tag">{text}</h2>
+					<div className="crono">
+						<div> <b>{formatTime(elapsedTime)} </b></div>
+							<div className="botones">
+								<button id="comenzar" onClick={handleStart}>Start</button>
+								<button id="parar" onClick={handlePause}>Stop</button>
+								<button id="reset" onClick={handleReset}>Reset</button>
+									<Audio></Audio>
+										<button id= "pista" onClick={handleTogglePista}>Pista</button>
+										{showPista && (
+        								<img src={little} alt="Pista" className="imagen-pista" />
+      )}
+							</div>
+								<p><b>{reward}</b></p>
+					</div>
+
+							<div className="star">
+								{star1} {star2} {star3}
+							</div>
 			
-   
-			<JigsawPuzzle
-				imageSrc={mar}
-				rows={filas}
-				columns={columnas}
-				onSolved={set}
-				className="jigsaw-puzzle"
-
-			/>
-		</div>
+								<JigsawPuzzle
+									imageSrc={mar}
+									rows={filas}
+									columns={columnas}
+									onSolved={set}
+									className="jigsaw-puzzle"
+								/>
+					</div>
 	);
 }
 

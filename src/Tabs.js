@@ -127,6 +127,7 @@ const Tabs = () => {
           <div>
           
             <Puzzle></Puzzle>
+
           </div>
         }
 
@@ -134,6 +135,7 @@ const Tabs = () => {
           <div>
             <h2>Laberinto</h2>
             <h3>Desplázate desde la casilla azul con los cursores del teclado para llegar a la meta.</h3>
+              
               <Laberinto></Laberinto>
             
           </div>
@@ -143,7 +145,9 @@ const Tabs = () => {
           <div>
             <h2>Dibujar</h2>
             <h3>Dibuja lo que quieras con cada una de las herramientas, puedes seleccionar distintos tipos de brocha también puedes usar el borrador. Ajusta el grosor de tu trazo/borrador desde el slider o desde el teclado '+' o '-' .No olvides guardar tu dibujo.</h3>
+             
               <Draw></Draw>
+
           </div>
         )}
 
@@ -151,7 +155,9 @@ const Tabs = () => {
           <div>
             <h2>Partículas 3D</h2>
             <h3>Elige tu forma de partículas deseada</h3>
+
               <Particulas></Particulas>
+
           </div>
         )}
 
@@ -160,6 +166,7 @@ const Tabs = () => {
             <h2>Campos de flujo</h2>
             
               <FlowField></FlowField>
+
           </div>
         )}
 

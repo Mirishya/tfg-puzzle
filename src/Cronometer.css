@@ -1,0 +1,73 @@
+#filas {
+    color: rgb(8, 8, 169);
+  }
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .menufilas, .menuColumnas {
+    margin: 2px;
+  }
+  
+  #columnas { 
+    color: rgb(8, 8, 169);
+  }
+
+  #parar {
+    color: white;
+    background-color: red;
+  }
+
+  #comenzar {
+    color: white;
+    background-color: green;
+  }
+
+  #reset {
+    color: white;
+    background-color: rgb(203, 203, 122);
+  }
+
+  #musica{
+    color: white;
+    background-color:indigo; 
+    height: 50px;
+  }
+
+  #pista {
+    color: white;
+    background-color:cornflowerblue;
+  }
+
+  .crono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    margin-top: 10px;
+  }
+  
+  .star{
+    size: 40;
+    color:gold;
+    animation-name: spin;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroll{
+    color:indigo;
+  }

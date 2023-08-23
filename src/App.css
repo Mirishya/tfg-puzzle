@@ -3,7 +3,6 @@
   
 }
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -30,58 +29,6 @@
   color: #61dafb;
 }
 
-
-#filas {
-  color: rgb(8, 8, 169);
-
-}
-
-#columnas { 
-  color: rgb(8, 8, 169);
-}
-#parar {
-  color: white;
-  background-color: red;
-  
-}
-#comenzar {
-  color: white;
-  background-color: green;
-  
-}
-#reset {
-  color: white;
-  background-color: rgb(203, 203, 122);
-  
-}
-#musica{
-  color: white;
-  background-color:indigo;
-  
-
-}
-
-.crono{
-  size: 20;
-  color:black;
-  width: 150px;
-  height: 150px;
-}
-
-.star{
-
-  size: 40;
-  color:gold;
-  animation-name: spin;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-#scroll{
-  color:indigo;
-}
-
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -90,7 +37,6 @@
     opacity: 1;
   }
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -118,6 +64,3 @@
     background-position: -600px -600px;
   }
 }
-
-
-  

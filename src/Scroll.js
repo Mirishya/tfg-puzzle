@@ -2,13 +2,14 @@ import React, { useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 
 function ScrollAnimation() {
+
   const ref = useRef();
   const [props, set] = useSpring(() => ({
     transform: 'translateY(0px)',
     opacity: 1,
     from: { transform: 'translateY(50px)', opacity: 0 },
     config: { duration: 5500 },
-  }));
+}));
 
   const handleScroll = () => {
     const top = ref.current.getBoundingClientRect().top;

@@ -4,7 +4,6 @@ import { useSpring, animated } from 'react-spring';
 import Tabs from "./Tabs.js";
 //import { BrowserRouter, Navigate, Link,Route } from 'react-router-dom';
 
-
 function App() {
 
 	const springProps = useSpring({
@@ -17,7 +16,7 @@ function App() {
 		<animated.div style={springProps}>
 	<div>
 	
- 			 <Tabs />
+ 		 <Tabs />
 	</div>
 		</animated.div>
 	);

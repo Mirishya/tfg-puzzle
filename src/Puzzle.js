@@ -1,11 +1,7 @@
 import React from "react";
-import "./App.css";
 import "./Puzzle.css";
-//import "./Formulario.php"
-//import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
-import { Cronometer } from "./Botton.js"
+import { Cronometer } from "./Cronometer.js"
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
-//import { Audio } from "./Audio.js";
 import { useSpring,animated} from 'react-spring';
 import Card from "./Card.jsx";
 import mar2 from "./mar2.jpg";
