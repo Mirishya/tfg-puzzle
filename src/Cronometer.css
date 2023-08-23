@@ -1,73 +1,90 @@
 #filas {
-    color: rgb(8, 8, 169);
-  }
+  color: rgb(8, 8, 169);
+}
 
 form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
   
-  .menufilas, .menuColumnas {
-    margin: 2px;
-  }
+.menufilas, .menuColumnas {
+  margin: 2px;
+}
+
+.imagen-pista-container {
+  display: flex;
+  justify-content: left; 
+  margin-top: 10px; 
+  padding-left: 50px; 
+  float: left;
+}
+
+.imagen-pista {
+  max-width: 100%;
+  margin-top: 10px;
+  border: 1px solid black; 
+}
   
-  #columnas { 
-    color: rgb(8, 8, 169);
-  }
+#columnas { 
+  color: rgb(8, 8, 169);
+}
 
-  #parar {
-    color: white;
-    background-color: red;
-  }
+#parar {
+  color: white;
+  background-color: red;
+}
 
-  #comenzar {
-    color: white;
-    background-color: green;
-  }
+#comenzar {
+  color: white;
+  background-color: green;
+}
 
-  #reset {
-    color: white;
-    background-color: rgb(203, 203, 122);
-  }
+#reset {
+  color: white;
+  background-color: rgb(203, 203, 122);
+}
 
-  #musica{
-    color: white;
-    background-color:indigo; 
-    height: 50px;
-  }
+#musica{
+  color: white;
+  background-color:indigo; 
+  height: 50px;
+}
 
-  #pista {
-    color: white;
-    background-color:cornflowerblue;
-  }
+#pista {
+  color: white;
+  background-color:cornflowerblue;
+}
 
-  .crono {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: black;
-    width: 150px;
-    height: 150px;
-  }
+.crono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: black;
+  width: 150px;
+  height: 75px;
+}
   
-  .botones {
-    display: flex;
-    justify-content: space-between; 
-    width: 100%; 
-    margin-top: 10px;
-  }
+.botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  width: 100%; 
+  margin-top: 10px;
+}
   
-  .star{
-    size: 40;
-    color:gold;
-    animation-name: spin;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+.star{
+  margin-top: 10px;
+  padding-left: 50px;
+  size: 40;
+  color:rgb(19, 18, 15);
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 
-  #scroll{
-    color:indigo;
-  }
+#scroll{
+  color:indigo;
+}

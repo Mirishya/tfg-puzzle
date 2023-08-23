@@ -1,10 +1,28 @@
-
 .tag {
 	text-align: center;
 	color: rgb(8, 8, 196);
 	margin: 2rem;
-	
+	/*top: 150px;*/
 }
+
+.jigsaw-puzzle {
+    width: 35%;
+    height: 35%;
+    border: 2px solid black;
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
+     float: center;  /* Puedes eliminar esta propiedad, ya que float puede afectar la disposición */
+     /*position: relative;  /* Puedes eliminar esta propiedad para evitar cambios de posición */
+	 top: -50px;  
+     left: 415px;  
+}
+
+.Puzzle {
+    background-color: aliceblue;
+    /* Agrega margen inferior para separar del elemento siguiente */
+    margin-bottom: 2px;
+}
+
+/*
 
 .jigsaw-puzzle {
 	width: 35%;
@@ -21,3 +39,4 @@
     background-color: aliceblue;
     
   }
+  */

@@ -1,17 +1,15 @@
 .card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
-    overflow: hidden;
-  }
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
   
-  .card img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-content {
+.card-content {
     padding: 1rem;
-  }
-  
+}

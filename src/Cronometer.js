@@ -22,7 +22,9 @@ function Cronometer() {
 
 	const [filas, searchfilas] = useState('');
 	const [columnas, searchcolumnas] = useState('');
+	
 	const [showPista, setShowPista] = useState(false);
+	const [botonTexto, setBotonTexto] = useState("Pista");
 
 	const handleFilasChange = (event) => {
 		searchfilas(event.target.value);
@@ -34,6 +36,7 @@ function Cronometer() {
 
 	const handleTogglePista = () => {
 		setShowPista(!showPista);
+		setBotonTexto(showPista ? "Pista" : "Ocultar");
 	  };
 
 	const [text, setText] = useState("Comienza el puzzle");
@@ -153,9 +156,7 @@ function Cronometer() {
 		const minutes = Math.floor(time / 60000);
 		const seconds = Math.floor((time - minutes * 60000) / 1000);
 		const milliseconds = Math.floor((time - minutes * 60000 - seconds * 1000) / 10);
-
 		return `${padZero(minutes)}:${padZero(seconds)}.${padZero(milliseconds)}`;
-
 	}
 
 	function padZero(num) {
@@ -193,8 +194,8 @@ function Cronometer() {
 					</div>
 				</p>
 
-        		<p>Filas: {filas}</p>
-        		<p>Columnas: {columnas}</p>
+        					<p>Filas: {filas}</p>
+        					<p>Columnas: {columnas}</p>
       		</form>
 
 				<h2 className="tag">{text}</h2>
@@ -205,26 +206,31 @@ function Cronometer() {
 								<button id="parar" onClick={handlePause}>Stop</button>
 								<button id="reset" onClick={handleReset}>Reset</button>
 									<Audio></Audio>
-										<button id= "pista" onClick={handleTogglePista}>Pista</button>
-										{showPista && (
-        								<img src={little} alt="Pista" className="imagen-pista" />
-      )}
+										<button id= "pista" onClick={handleTogglePista}>{botonTexto}</button>
 							</div>
-								<p><b>{reward}</b></p>
+										
+					</div>
+										
+							
+					<div className="star">
+						<p><b>{reward}</b></p>
+						{star1} {star2} {star3}
 					</div>
 
-							<div className="star">
-								{star1} {star2} {star3}
-							</div>
+					{showPista && (
+						<div className="imagen-pista-container">
+        					<img src={little} alt="Pista" className="imagen-pista" />
+						</div>
+     									)}
 			
-								<JigsawPuzzle
-									imageSrc={mar}
-									rows={filas}
-									columns={columnas}
-									onSolved={set}
-									className="jigsaw-puzzle"
-								/>
-					</div>
+						<JigsawPuzzle
+							imageSrc={mar}
+							rows={filas}
+							columns={columnas}
+							onSolved={set}
+							className="jigsaw-puzzle"
+						/>
+		</div>
 	);
 }
 

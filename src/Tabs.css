@@ -1,40 +1,32 @@
 .tabs {
     display: flex;
-   
   }
 
-  .tabmain{
-    position: relative;
+.tabmain{
+  position: relative;
   background-color: white;
-  }
+}
   
-  .tabs button {
-    padding: 80px 200px;
-    flex:1;
-    cursor: pointer;
-    justify-content: center;
-    border: 1px solid #18257b;
-    overflow: hidden;
-    clip-path: polygon(50% 0%, 87% 25%, 87% 75%, 50% 100%, 13% 75%, 13% 25%);
-    background-image:linear-gradient(to bottom right,
-    #22aded 0%,
-    gold 20%,
-    #757adb 40%,
-    rgb(124, 229, 236)60%,
-     rgb(36, 14, 183) 80%
-    
-    ); 
-    background-size: 1000px 1000px;
-   
-    animation: moveBackground 8s linear infinite alternate;
-  }
- 
-  
-  .tabs button.active {
-    background-color: #07a2d6;
-  }
- 
-  
+.tabs button {
+  padding: 80px 200px;
+  flex:1;
+  cursor: pointer;
+  justify-content: center;
+  border: 1px solid #18257b;
+  overflow: hidden;
+  clip-path: polygon(50% 0%, 87% 25%, 87% 75%, 50% 100%, 13% 75%, 13% 25%);
+  background-image:linear-gradient(to bottom right,
+  #22aded 0%,
+  gold 20%,
+  #757adb 40%,
+  rgb(124, 229, 236)60%,
+  rgb(36, 14, 183) 80%
+  ); 
 
+  background-size: 1000px 1000px;
+  animation: moveBackground 8s linear infinite alternate;
+}
  
-  
+.tabs button.active {
+  background-color: #07a2d6;
+}

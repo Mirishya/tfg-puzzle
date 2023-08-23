@@ -54,8 +54,8 @@
   100%{ 
     transform: rotate(0.5deg);
   }
-  
 }
+
 @keyframes moveBackground {
   0% {
     background-position: 0 0;
