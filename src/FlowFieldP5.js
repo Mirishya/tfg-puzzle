@@ -40,19 +40,19 @@ const FlowField = () => {
     // Posicionar el radio button en la interfaz
     const radioContainer = p.createDiv();
     radioContainer.child(shapeRadio);
-    radioContainer.position(0, 660);
+    radioContainer.position(0, 100);
 
     // Asignar el evento changed para capturar el cambio de selección
     shapeRadio.changed(handleLineShape);
 
     //Crear botón de reset
     p.createButton("Reset")
-    .position(450, 665)
+    .position(450, 105)
     .mousePressed(() => resetCanvas(p)); 
 
     //Crear botón de guardar
     p.createButton("Guardar imagen")
-    .position(700, 665)
+    .position(700, 105)
     .mousePressed(saveCanvas);
 
   }

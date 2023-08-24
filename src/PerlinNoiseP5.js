@@ -23,7 +23,7 @@ import p5 from 'p5';
       sliderContainer.style('height','30px');
 
       // Posicionar el contenedor de sliders en algún lugar de la pantalla
-      sliderContainer.position(0, p.height + 150); // Ajusta la posición en función de tus necesidades
+      sliderContainer.position(0, p.height - 420); // Ajusta la posición en función de tus necesidades
 
       // Posicionar los sliders dentro del contenedor
       const xOffSliderLabel = p.createP('Ajusta el eje X:');

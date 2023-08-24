@@ -27,11 +27,11 @@ const Particles = () => {
      //Texto color particulas
      const colorDiv = p.createDiv('Elige el color de la partícula');
      colorDiv.style('font-size', '16px');
-     colorDiv.position(1000, 675);
+     colorDiv.position(1000, 125);
 
      //Selector del color particulas
      const colorInput = p.createInput(particleColor, 'color');
-     colorInput.position(1075, 700);
+     colorInput.position(1075, 150);
      colorInput.input(handleParticleColorChange);
 
   }
@@ -52,7 +52,7 @@ const Particles = () => {
      // Posicionar el radio button en la interfaz
      const radioContainer = p.createDiv();
      radioContainer.child(shapeRadio);
-     radioContainer.position(0, 680);
+     radioContainer.position(0, 130);
 
      // Asignar el evento changed() para capturar el cambio de selección
      shapeRadio.changed(handleParticleShapeChange);
@@ -63,11 +63,11 @@ function changeNumber(p){
    //Texto numero partículas
     const titleDiv = p.createDiv('Elige tu número de partículas');
     titleDiv.style('font-size', '16px');
-    titleDiv.position(450, 680);
+    titleDiv.position(450, 130);
 
     // Slider para cambiar el número de partículas
     const countSlider = p.createSlider(1, 1000, 200, 1);
-    countSlider.position(500, 705);
+    countSlider.position(500, 155);
     countSlider.style('width', '100px');
     countSlider.changed(handleParticleCountChange);
 
@@ -77,11 +77,11 @@ function changeSpeed(p){
    //Texto velocidad
    const speedDiv = p.createDiv('Ajusta tu velocidad');
    speedDiv.style('font-size', '16px');
-   speedDiv.position(750, 680);
+   speedDiv.position(750, 130);
    
   //Slider de la velocidad
    const slider = p.createSlider(1, 10000, 1, 1); // Establece los valores mínimo, máximo e inicial del slider
-   slider.position(770, 705);
+   slider.position(770, 155);
    slider.style('width', '100px');
 
    // Asignar función para manejar el cambio de valor del slider de velocidad

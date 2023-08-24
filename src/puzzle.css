@@ -11,7 +11,7 @@
     border: 2px solid black;
     box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
     float: center;  
-    /*position: relative;  /* Puedes eliminar esta propiedad para evitar cambios de posición */
+    /*position: relative; */
 	top: -50px;  
     left: 415px;  
 }
@@ -20,22 +20,3 @@
     background-color: aliceblue;
     margin-bottom: 2px;
 }
-
-/*
-
-.jigsaw-puzzle {
-	width: 35%;
-	height: 35%;
-	border: 2px solid black;
-	box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
-	float:none;
-	position: relative;
-    top: -150px;
-    left: 415px;
-}
-
-.Puzzle{
-    background-color: aliceblue;
-    
-  }
-  */

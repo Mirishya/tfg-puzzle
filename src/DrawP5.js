@@ -113,10 +113,10 @@ const Draw = () => {
         p.noStroke();
 
         colorPicker = p.createColorPicker('#000000');
-        colorPicker.position(50, 770);
+        colorPicker.position(50, 220);
 
         sel = p.createSelect();
-        sel.position(260, 780);
+        sel.position(260, 230);
         sel.option("Trazo libre");
         sel.option("Dispersión de puntos");
         sel.option("Borrador");
@@ -124,15 +124,15 @@ const Draw = () => {
         sel.option("Dibuja triángulos");
 
         slider = p.createSlider(1, 100, 20, 1);
-        slider.position(550, 780);
+        slider.position(550, 240);
         slider.style('width', '180px');
 
         p.createButton("Borrar todo")
-          .position(900, 740)
+          .position(900, 190)
           .mousePressed(() => clearBG(p));
         
         p.createButton("Guardar la imagen   ")
-          .position(900, 780)
+          .position(900, 240)
           .mousePressed(saveCanvas);
 
       };
