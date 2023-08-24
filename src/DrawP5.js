@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import p5 from 'p5';
+import './Tabs.css';
 
 const Draw = () => {
   const canvasRef = useRef(null);
@@ -7,7 +8,6 @@ const Draw = () => {
   let sel;
   let slider;
   const bgcolor = 'white';
-
   let canvasInstance;
 
 //Guardar Imagen
@@ -152,6 +152,7 @@ const Draw = () => {
 
   return (
   <div>
+    
   <div ref={canvasRef}></div>;
   </div>
   )
