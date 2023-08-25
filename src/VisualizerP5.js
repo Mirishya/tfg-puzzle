@@ -411,21 +411,24 @@ const Visualizer = () => {
   let currentVisualization = 'Espectrograma';
   let currentGenre = 'Electrónica'; 
 
-  const changeGenre = (p, newGenre) => {
-    currentGenre = newGenre;
-    bgSound.stop();
-    bgSound = new Tone.Player(songs[currentGenre]);
-    bgSound.chain(myFFT, Tone.Destination);
-    if (bgSound.state === 'stopped') {
-      bgSound.start();
-    }
-  };
-
   const songs = {
     Electrónica: require('./electronica.mp3'), 
-    Pop: require('./pop.mp3'), 
-    Mar: require('./musica.mp3'),
-    Rock: require('./rock.mp3')
+    Chillout: require('./chillout.mp3'), 
+    Rock: require('./rock.mp3'),
+    Jazz: require('./jazz.mp3'),
+    Clásica: require('./clasica.mp3'),
+    Ópera: require('./opera.mp3'),
+    Pop: require ('./pop.mp3')
+  };
+
+  const changeGenre = async (p, newGenre) => {
+    currentGenre = newGenre;
+    
+    if (bgSound.state === 'started') {
+      bgSound.stop();
+    }
+    await bgSound.load(songs[currentGenre]);
+    bgSound.start();
   };
 
   function drawMenu(p){
@@ -435,6 +438,11 @@ const Visualizer = () => {
     createDivGrey.style('width', '1280px');
     createDivGrey.style('height','30px');
     createDivGrey.position(0, 140);
+
+    //Texto para canciones
+    const textSongs= p.createDiv('Selecciona la canción');
+    textSongs.style('font-size', '16px');
+    textSongs.position(0, 140);
     
     //Texto para el start
     const textStart= p.createDiv('Dale a reproducir');
@@ -445,23 +453,29 @@ const Visualizer = () => {
     const textStop= p.createDiv('Detén la canción');
     textStop.style('font-size', '16px');
     textStop.position(550, 140);
+
+    //Texto para formas
+    const textForms= p.createDiv('Elige la forma');
+    textForms.style('font-size', '16px');
+    textForms.position(750, 140);
     
     p.createButton('Start').position(445,143).mousePressed(() => startSound(p));
     p.createButton('Stop').position(675,143).mousePressed(() => stopSound(p));
-    
+
+    //Selector de formas
     const visualizationSelect = p.createSelect();
-    visualizationSelect.position(800, 145);
+    visualizationSelect.position(860, 145);
     visualizationSelect.option('Espectrograma');
     visualizationSelect.option('Círculo');
     visualizationSelect.option('Ondas');
     visualizationSelect.changed(() => changeVisualization(p, visualizationSelect.value()));
 
+    //Selector canciones
     const genreSelect = p.createSelect();
-    genreSelect.position(100, 145);
+    genreSelect.position(165, 145);
     for (const genre in songs) {
       genreSelect.option(genre);
     }
-
     genreSelect.changed(() => changeGenre(p, genreSelect.value()));
     }
 
@@ -502,7 +516,7 @@ const Visualizer = () => {
       p.stroke(color);
       p.strokeWeight(5);
 
-      const mappedRadius = radius + intensity * 10; // Ajustar el radio según la intensidad
+      const mappedRadius = radius + intensity * 10; 
       const x = centerX + p.cos(angle) * mappedRadius;
       const y = centerY + p.sin(angle) * mappedRadius;
       p.point(x, y);
@@ -532,6 +546,19 @@ const Visualizer = () => {
   const stopSound = () => {
      bgSound.stop();
   };
+
+  function drawVisualization(p){
+    p.background("#f0f0f0");
+        levels = myFFT.getValue();
+
+        if (currentVisualization === 'Espectrograma') {
+          drawEspectogramForms(p);
+        } else if (currentVisualization === 'Círculo') {
+          drawCircularForms(p)
+        } else if (currentVisualization === 'Ondas') {
+          drawWaveForms(p);
+        }
+  }
   
   useEffect(() => {
     const sketch = (p) => {
@@ -550,16 +577,7 @@ const Visualizer = () => {
 
       p.draw = () => draw(p);
       const draw = (p) => {
-        p.background("#f0f0f0");
-        levels = myFFT.getValue();
-
-        if (currentVisualization === 'Espectrograma') {
-          drawEspectogramForms(p);
-        } else if (currentVisualization === 'Círculo') {
-          drawCircularForms(p)
-        } else if (currentVisualization === 'Ondas') {
-          drawWaveForms(p);
-        }
+        drawVisualization(p);
       };
     };
 

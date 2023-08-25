@@ -16,12 +16,12 @@ function Puzzle() {
 
 	return (
 		<animated.div style={springProps}>
-        	<div  className="Puzzle">
+        	<div className="Puzzle">
 				<Card
 					image={mar2}
-					title="Puzzle React"
+					title="Puzzle"
 					description="REGLAS: Determina número de filas y columnas, cuando estés listo pulsa Start. 
-					En cuanto finalices el puzzle podrás ver tu Puntuación. Si quieres relajarte pulsa en Reproduce música."
+					En cuanto finalices el puzzle podrás ver tu Puntuación. Si quieres relajarte pulsa en Reproduce música, y si necesitas un poco de ayuda, haz click en Pista."
 
 				/>
 				<Cronometer />

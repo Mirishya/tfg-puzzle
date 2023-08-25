@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { useSpring, animated } from 'react-spring';
 import Tabs from "./Tabs.js";
-//import { BrowserRouter, Navigate, Link,Route } from 'react-router-dom';
 
 function App() {
 

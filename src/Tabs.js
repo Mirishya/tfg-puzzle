@@ -414,7 +414,7 @@ const Tabs = () => {
 
 export default Tabs;
 */
-
+//////////////////////////
 import React, { useState, useEffect } from 'react';
 import './Tabs.css';
 import './App.css';
@@ -449,7 +449,7 @@ const Tabs = () => {
     setShowTabs(true); 
   };
   const handleGoBack = () => {
-    window.location.href = '/'; // Cambia esto a la URL correcta de la página de inicio
+    window.location.href = '/'; 
   };
 
   return (
@@ -686,7 +686,7 @@ const Tabs = () => {
             </button>
             <br></br>
             <h2>Visualizador</h2>
-            <h3>En el botón de Browse, elige la canción desde tu ordenador. Luego dale a Start para comenzar y si lo deseas lo puedes parar.</h3>
+            <h3>Selecciona la canción que prefieras, luego dale a Start para comenzar y si lo deseas lo puedes parar. Desplázate por cada una de las formas.</h3>
           
               <Visualizer></Visualizer>
 
