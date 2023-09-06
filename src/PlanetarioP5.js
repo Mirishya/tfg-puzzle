@@ -472,7 +472,7 @@ const Planetario = () => {
       <div id="p5-canvas"></div>
         {showSun && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Sol: </b></p> El Sol es una estrella enana amarilla en el centro del sistema solar, se formó hace unos 4.6 mil millones de años y está a mitad de su vida. Tiene un diámetro de aproximadamente 1.4 millones de kilómetros.
             Está compuesto principalmente de hidrógeno y helio. Su temperatura en el núcleo es de alrededor de 15 millones de grados Celsius.
 
@@ -481,7 +481,7 @@ const Planetario = () => {
 
         {showMercury && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Mercurio: </b></p> Es el primer planeta del sistema solar,cuenta con una inclinación de 0.03º.
             El tiempo de rotación de Mercurio es de aproximadamente 58.6 días, mientras que su tiempo de traslación alrededor del Sol es de aproximadamente 88 días.
             Su temperatura máxima durante el día puede alcanzar hasta 430ºC, y su temperatura mínima durante la noche puede descender hasta -180ºC. Mercurio no tiene satélites naturales.
@@ -491,7 +491,7 @@ const Planetario = () => {
 
         {showVenus && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Venus: </b></p>Es el segundo planeta del sistema solar,cuenta con una inclinación de 177.3º, lo que significa que su rotación es retrógrada.
             El tiempo de rotación de Venus es de aproximadamente 243 días, mientras que su tiempo de traslación alrededor del Sol es de aproximadamente 225 días.
             Su temperatura es extremadamente alta, llegando hasta 470ºC debido a su densa atmósfera compuesta principalmente por dióxido de carbono.Venus tampoco tiene satélites naturales conocidos.
@@ -501,7 +501,7 @@ const Planetario = () => {
 
         {showEarth && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Tierra: </b></p> Es el tercer planeta del sistema solar, cuenta con una inclinación de 23,5º.
              El tiempo de rotación de la Tierra es de 24 horas, mientras que el tiempo de traslación, es decir, alrededor del Sol es de 365 días.
              Su temperatura máxima es de 50ºC, y su temperatura mínima ha llegado a alcanzar los -90ºC. El único satélite de la Tierra es la Luna, tarda 27,3 días en rotar sobre su eje y en orbitar la Tierra. Aunque es un satélite de la Tierra, la Luna, cuenta con un diámetro de aproximadamente 3.475 kilómetros.
@@ -511,7 +511,7 @@ const Planetario = () => {
 
         {showMars && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Marte: </b></p> Es el cuarto planeta del sistema solar, cuenta con una inclinación de 25.2º.
             El tiempo de rotación de Marte es de aproximadamente 24.6 horas, similar al de la Tierra. Su tiempo de traslación alrededor del Sol es de aproximadamente 687 días.
             La temperatura en Marte puede variar desde -153ºC en las regiones polares hasta 20ºC en las regiones ecuatoriales durante el día.
@@ -522,7 +522,7 @@ const Planetario = () => {
 
         {showJupiter && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Jupiter: </b></p> Es el quinto planeta del sistema solar y el más grande, cuenta con una inclinación de aproximadamente 3.1º.
             El tiempo de rotación de Júpiter es de aproximadamente 9.9 horas, mientras que su tiempo de traslación alrededor del Sol es de aproximadamente 11.9 años.
             La temperatura en la parte superior de la atmósfera de Júpiter puede ser tan baja como -145ºC. Júpiter tiene un sistema de anillos y más de 80 lunas conocidas, las más grandes son Ío, Europa, Ganímedes y Calisto.
@@ -532,7 +532,7 @@ const Planetario = () => {
 
         {showSaturn && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Saturno: </b></p> Es el sexto planeta del sistema solar y es conocido por sus impresionantes anillos, cuenta con una inclinación de aproximadamente 26.7º.
             El tiempo de rotación de Saturno es de aproximadamente 10.7 horas, mientras que su tiempo de traslación alrededor del Sol es de aproximadamente 29.5 años.
             La temperatura promedio en la parte superior de la atmósfera de Saturno es de alrededor de -178ºC. Saturno tiene un sistema de anillos espectacular y tiene más de 80 lunas conocidas, las más grandes son Titán, Rea, Dione, Tetis y Encélado.
@@ -542,7 +542,7 @@ const Planetario = () => {
 
         {showUran && (
 
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Urano: </b></p> Es el séptimo planeta del sistema solar, cuenta con una inclinación extrema de aproximadamente 97.8º, lo que hace que su eje de rotación esté casi en posición horizontal.
             El tiempo de rotación de Urano es de aproximadamente 17.2 horas, mientras que su tiempo de traslación alrededor del Sol es de aproximadamente 84 años.
             La temperatura promedio en la atmósfera superior de Urano es extremadamente fría, alrededor de -224ºC. Urano tiene 27 lunas conocidas, las más grandes son Titania, Oberón, Umbriel, Ariel y Miranda.
@@ -553,7 +553,7 @@ const Planetario = () => {
         {showNeptune && (
 
     
-          <div>
+          <div style={{ paddingLeft: '20px' }}>
             <p><b>Planeta Neptuno: </b></p> Es el octavo y último planeta principal del sistema solar, cuenta con una inclinación de aproximadamente 28.3º.
             El tiempo de rotación de Neptuno es de aproximadamente 16.1 horas, mientras que su tiempo de traslación alrededor del Sol es de aproximadamente 165 años.
             Neptuno es un planeta gaseoso con una atmósfera fría, donde las temperaturas promedio son de alrededor de -214ºC.
