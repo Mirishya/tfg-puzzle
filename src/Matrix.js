@@ -4,21 +4,46 @@ import p5 from 'p5';
 const MatrixRain = () => {
     let col = [];
     let scale = 30;
+    let isJapanese = false; 
+
+     // Función para cambiar entre caracteres japoneses y normales
+     function toggleCharacters() {
+        isJapanese = !isJapanese;
+    }
+
+    function drawMenu(p){
+        const createDivGrey = p.createDiv();
+        createDivGrey.style('background-color', '#d3d3d3');
+        createDivGrey.style('width', '1280px');
+        createDivGrey.style('height','30px');
+        createDivGrey.position(0, 140);
+
+        const changeCharacters = p.createButton('Cambiar caracteres');
+        changeCharacters.position(20, 145);
+        changeCharacters.mousePressed(toggleCharacters);
+    }
 
     useEffect(() => {
         const sketch = (p) => {
-
             class Char {
                 constructor() {
                     this.changeChar();
                     this.speed = p.floor(p.random([0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 15, 20]));
-                    this.value = String.fromCharCode(p.int(p.random(0x30A0, 0x30ff)));
+                    //Alfabeto japonés
+                    this.value = isJapanese ? String.fromCharCode(p.int(p.random(0x30A0, 0x30ff))) : ''; // Inicialmente, no mostrará caracteres
                 }
+
                 changeChar() {
                     if (p.frameCount % this.speed === 0) {
-                        /*const charOptions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
-                          this.value = charOptions[p.floor(p.random(charOptions.length))];*/
-                        this.value = String.fromCharCode(p.int(p.random(0x30A0, 0x30ff)));
+                        if (isJapanese) {
+                            this.value = String.fromCharCode(p.int(p.random(0x30A0, 0x30ff)));
+                        } else {
+                            // Alfabeto occidental
+                            const charOptions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+                            'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S',
+                            'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ];
+                            this.value = charOptions[p.floor(p.random(charOptions.length))];
+                        }
                     }
                 }
             }
@@ -62,6 +87,7 @@ const MatrixRain = () => {
                 for (let x = 0; x < p.floor(p.width / scale); x++) {
                     col[x] = new Column(x);
                 }
+               drawMenu(p);
             };
 
             p.draw = () => {
@@ -73,18 +99,17 @@ const MatrixRain = () => {
                     col[x].show();
                 }
             };
+            toggleCharacters();
         };
-    
-  
-    const p5Canvas = new p5(sketch);
-    return () => {
-        p5Canvas.remove(); // Elimina el sketch de p5.js al desmontar el componente
 
-    };
+        const p5Canvas = new p5(sketch);
+        return () => {
+            p5Canvas.remove();
+        };
 
-}, []);
+    }, []);
 
-  return <div></div>;
+    return <div></div>;
 };
 
 export default MatrixRain;
