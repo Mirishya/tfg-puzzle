@@ -179,7 +179,7 @@ const Maze = () => {
   }, [playerCanMove]);
 
   return(
-    <div className="maze">
+    <div className="maze" style={{ paddingLeft: '200px' }}>
     {completed && (
       <div className="maze-completed">
         <p><b>Laberinto completado</b></p>
